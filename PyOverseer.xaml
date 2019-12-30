@@ -1,0 +1,37 @@
+﻿<Window 
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+       Title="PyOverseer" Height="375" Width="500">
+    <Grid>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="_Firewall" >
+                    <MenuItem Header="_File" Click="Firewall_File_Click" >
+                    </MenuItem>
+                    <MenuItem Header="_Folder" Click="Firewall_Folder_Click" >
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Header="_IIS">
+                    <MenuItem Header="_File" Click="IIS_File_Click" >
+                    </MenuItem>
+                    <MenuItem Header="_Folder" Click="IIS_Folder_Click" >
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Header="_MSSQL">
+                    <MenuItem Header="_File" Click="MSSQL_File_Click" >
+                    </MenuItem>
+                    <MenuItem Header="_Folder" Click="MSSQL_Folder_Click" >
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Header="_Exit" Click="OnExit"/>
+            </MenuItem>
+        </Menu>
+        <RichTextBox Name="outputBox" VerticalScrollBarVisibility="Visible" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="{Binding Path=ActualWidth, RelativeSource={RelativeSource AncestorType=Grid}}" Margin="0,20,-1.4,0">
+            <FlowDocument>
+                <Paragraph LineHeight="1">
+                    <Run Text=""/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+    </Grid>
+</Window>

@@ -1,5 +1,5 @@
 # PyOverseer
-Windows log Parser using iron python that exports a kml file for google earth to read.
+Windows log Parser
 
 # TODO
 
